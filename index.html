@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Solutions Pro</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-100 text-center p-4">
+    <h1 class="text-3xl font-bold mb-4">Smart Solutions Dashboard</h1>
+    <div id="auth" class="mb-4">
+        <input type="email" id="email" placeholder="Email" class="border p-2 m-1">
+        <input type="password" id="password" placeholder="Password" class="border p-2 m-1">
+        <button onclick="login()" class="bg-green-500 text-white px-4 py-2 m-1 rounded">Iniciar sesión</button>
+        <button onclick="register()" class="bg-blue-500 text-white px-4 py-2 m-1 rounded">Registrarse</button>
+        <button onclick="logout()" class="bg-red-500 text-white px-4 py-2 m-1 rounded">Cerrar sesión</button>
+    </div>
+    <nav class="mb-4">
+        <button onclick="showSection('dashboard')" class="bg-gray-700 text-white px-4 py-2 m-1 rounded">Dashboard</button>
+        <button onclick="showSection('clientes')" class="bg-gray-700 text-white px-4 py-2 m-1 rounded">Clientes</button>
+        <button onclick="showSection('prestamos')" class="bg-gray-700 text-white px-4 py-2 m-1 rounded">Préstamos</button>
+        <button onclick="showSection('reportes')" class="bg-gray-700 text-white px-4 py-2 m-1 rounded">Reportes</button>
+    </nav>
+    <div id="content" class="bg-white p-4 rounded shadow">
+        <canvas id="myChart" width="400" height="200"></canvas>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
